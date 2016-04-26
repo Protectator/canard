@@ -11,8 +11,7 @@ GameObject:
   - 212: {fileID: 21282486}
   - 58: {fileID: 5888846}
   - 50: {fileID: 5004016}
-  - 114: {fileID: 11457084}
-  - 61: {fileID: 6138630}
+  - 114: {fileID: 11409430}
   m_Layer: 0
   m_Name: Caneton
   m_TagString: Untagged
@@ -63,20 +62,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.4065742
---- !u!61 &6138630
-BoxCollider2D:
+--- !u!114 &11409430
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129036}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 5.48, y: 3.78}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ad59ac8bf912b439ac94c71405145d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 1, y: 0}
+  direction: {x: -1, y: 0}
+  isLinkedToCamera: 0
 --- !u!212 &21282486
 SpriteRenderer:
   m_ObjectHideFlags: 1
