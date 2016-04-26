@@ -24,6 +24,21 @@ public class PlayerScript : MonoBehaviour
           speed.x * inputX,
           speed.y * inputY);
 
+        // 5 - Tir
+        bool shoot = Input.GetButtonDown("Fire1");
+        shoot |= Input.GetButtonDown("Fire2");
+        // Astuce pour ceux sous Mac car Ctrl + flèches est utilisé par le système
+
+        if (shoot)
+        {
+            WeaponScript weapon = GetComponent<WeaponScript>();
+            if (weapon != null)
+            {
+                // false : le joueur n'est pas un ennemi
+                weapon.Attack(false);
+            }
+        }
+
         // 6 - Déplacement limité au cadre de la caméra
         var dist = (transform.position - Camera.main.transform.position).z;
 
