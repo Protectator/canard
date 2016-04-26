@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11485340}
   - 114: {fileID: 11438896}
   m_Layer: 0
-  m_Name: PlayerShot
+  m_Name: EnemyShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
-  direction: {x: 1, y: 0}
+  direction: {x: -1, y: 0}
 --- !u!114 &11485340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -87,6 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ff7dade0edfb6478513598b2951c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  isEnemyShot: 0
 --- !u!212 &21264708
 SpriteRenderer:
   m_ObjectHideFlags: 1

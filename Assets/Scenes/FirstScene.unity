@@ -124,6 +124,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 441288, guid: 3efdbf71fcbde974293127e96bc74244, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 441288, guid: 3efdbf71fcbde974293127e96bc74244, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000016292068
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3efdbf71fcbde974293127e96bc74244, type: 2}
   m_IsPrefabParent: 0
@@ -131,6 +139,23 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 451942, guid: 3efdbf71fcbde974293127e96bc74244, type: 2}
   m_PrefabInternal: {fileID: 97222050}
+--- !u!1 &97222052 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192240, guid: 3efdbf71fcbde974293127e96bc74244, type: 2}
+  m_PrefabInternal: {fileID: 97222050}
+--- !u!114 &97222053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97222052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f068a96a726ea3d4582886fa743ce1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 418560, guid: 6dcc14ce495a82542828b4b50692cc3c, type: 2}
+  shootingRate: 0.5
 --- !u!1 &100358719
 GameObject:
   m_ObjectHideFlags: 0
