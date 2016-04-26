@@ -40,7 +40,9 @@ public class HealthScript : MonoBehaviour
                 // sinon c'est le script qui serait détruit avec ""this""
                 Destroy(shot.gameObject);
 
-				textLife.text = hp.ToString();
+				if (!isEnemy) {
+					textLife.text = hp.ToString ();
+				}
 
                 if (hp <= 0)
                 {
