@@ -38,6 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2551913475
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tirs Joueur
+    uniqueID: 2311356145
+    locked: 0
+  - name: Joueur
+    uniqueID: 3994783735
+    locked: 0
+  - name: Bonus
+    uniqueID: 626776419
+    locked: 0
+  - name: Ennemis
+    uniqueID: 840132357
+    locked: 0
+  - name: Tirs ennemis
+    uniqueID: 1227910471
     locked: 0
