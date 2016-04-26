@@ -613,7 +613,7 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4280614908
+          rgba: 4280604159
         key1:
           serializedVersion: 2
           rgba: 2405119
@@ -636,16 +636,16 @@ ParticleSystem:
           serializedVersion: 2
           rgba: 0
         ctime0: 0
-        ctime1: 56861
-        ctime2: 63800
+        ctime1: 43369
+        ctime2: 63415
         ctime3: 65535
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
+        atime0: 54548
         atime1: 65535
-        atime2: 0
+        atime2: 65535
         atime3: 0
         atime4: 0
         atime5: 0
