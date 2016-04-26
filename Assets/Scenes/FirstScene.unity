@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e54b2984fa872f49994bc5896ca447c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
+  hp: 5
   isEnemy: 0
 --- !u!1 &341617400
 GameObject:

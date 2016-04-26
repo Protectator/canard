@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Gestion des points de vie et des dégâts
@@ -15,6 +16,14 @@ public class HealthScript : MonoBehaviour
     /// </summary>
     public bool isEnemy = true;
 
+	private Text textLife;
+
+	void Start() 
+	{
+		textLife = GameObject.Find("Vie chiffre").GetComponent<Text>();
+		textLife.text = hp.ToString ();
+	}
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         // Est-ce un tir ?
@@ -30,6 +39,8 @@ public class HealthScript : MonoBehaviour
                 // On détruit toujours le gameObject associé
                 // sinon c'est le script qui serait détruit avec ""this""
                 Destroy(shot.gameObject);
+
+				textLife.text = hp.ToString();
 
                 if (hp <= 0)
                 {
