@@ -1621,9 +1621,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 1905829357}
-  cursorTexture: {fileID: 2800000, guid: 89311a2a34b044d599823c0e3f89e354, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 66575228d967c41f3a8aad75897b92a7, type: 3}
   cursorMode: 0
-  hotSpot: {x: 20, y: 20}
+  hotSpot: {x: 15, y: 15}
 --- !u!114 &2009648904
 MonoBehaviour:
   m_ObjectHideFlags: 0
