@@ -20,6 +20,6 @@ public class ShotScript : MonoBehaviour
     void Start()
     {
         // 2 - Destruction programmée
-        Destroy(gameObject, 20); // 20sec
+        Destroy(gameObject, 6); // 6sec
     }
 }

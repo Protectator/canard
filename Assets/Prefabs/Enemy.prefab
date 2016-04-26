@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11463016}
   - 114: {fileID: 11424232}
   - 114: {fileID: 11449220}
+  - 114: {fileID: 11468184}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -143,6 +144,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 4, y: 4}
   direction: {x: -1, y: 0}
+--- !u!114 &11468184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ad59ac8bf912b439ac94c71405145d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 1, y: 2}
+  direction: {x: -1, y: 0}
+  isLinkedToCamera: 0
 --- !u!212 &21207230
 SpriteRenderer:
   m_ObjectHideFlags: 1
