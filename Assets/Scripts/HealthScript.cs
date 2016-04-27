@@ -21,6 +21,8 @@ public class HealthScript : MonoBehaviour
 
 	public Transform popcornPrefab;
 
+	public GameObject deadPanel;
+
 	void Start() 
 	{
 		textLife = GameObject.Find("Vie chiffre").GetComponent<Text>();
@@ -56,7 +58,9 @@ public class HealthScript : MonoBehaviour
 					SpecialEffectsHelper.Instance.Explosion (transform.position);
 
 					SoundEffectsHelper.Instance.MakeExplosionSound ();
-
+					if (!isEnemy) {
+						deadPanel.SetActive (true);
+					}
 					// Destruction !
 					Destroy (gameObject);
 				}
