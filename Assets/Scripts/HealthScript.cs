@@ -47,7 +47,7 @@ public class HealthScript : MonoBehaviour
 				} else {
 					GameModel.score += GameModel.ennemyValue;
 					textScore.text = GameModel.score.ToString ();
-					var popcorn = Instantiate(popcornPrefab) as Transform;
+					var popcorn = Instantiate (popcornPrefab) as Transform;
 					popcorn.position = transform.position;
 				}
 
@@ -71,6 +71,9 @@ public class HealthScript : MonoBehaviour
 			GameModel.cannetonValue += GameModel.popcornIncrement;
 			textScore.text = GameModel.score.ToString ();
 			Destroy (collider.gameObject);
+		} else if (collider.gameObject.tag == "Enemy") {
+			hp -= shot.damage;
+			textLife.text = hp.ToString ();
 		}
     }
 }

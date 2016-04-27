@@ -17,7 +17,7 @@ GameObject:
   - 114: {fileID: 11468184}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   isEnemy: 1
+  popcornPrefab: {fileID: 486724, guid: 85283e7cc9e05ef4895db4baa7e6805b, type: 2}
 --- !u!114 &11449220
 MonoBehaviour:
   m_ObjectHideFlags: 1
