@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 418560, guid: 6dcc14ce495a82542828b4b50692cc3c, type: 2}
-  shootingRate: 0.5
+  shootingRate: 2
 --- !u!114 &11424232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,6 +122,8 @@ MonoBehaviour:
   isEnemy: 1
   popcornPrefab: {fileID: 486724, guid: 85283e7cc9e05ef4895db4baa7e6805b, type: 2}
   deadPanel: {fileID: 0}
+  endPanel: {fileID: 0}
+  background: {fileID: 0}
 --- !u!114 &11449220
 MonoBehaviour:
   m_ObjectHideFlags: 1

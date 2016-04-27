@@ -76,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 190688}
   m_LocalRotation: {x: 0, y: 0, z: 0.9914448, w: -0.13052633}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0013678, y: 1.0013679, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 408410}
   m_RootOrder: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 418560, guid: 6dcc14ce495a82542828b4b50692cc3c, type: 2}
-  shootingRate: 0.5
+  shootingRate: 2
 --- !u!114 &11456066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 418560, guid: 6dcc14ce495a82542828b4b50692cc3c, type: 2}
-  shootingRate: 0.5
+  shootingRate: 2
 --- !u!114 &11482826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,6 +188,8 @@ MonoBehaviour:
   isEnemy: 1
   popcornPrefab: {fileID: 486724, guid: 85283e7cc9e05ef4895db4baa7e6805b, type: 2}
   deadPanel: {fileID: 0}
+  endPanel: {fileID: 0}
+  background: {fileID: 0}
 --- !u!114 &11487194
 MonoBehaviour:
   m_ObjectHideFlags: 1

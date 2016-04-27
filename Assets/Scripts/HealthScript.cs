@@ -24,10 +24,12 @@ public class HealthScript : MonoBehaviour
 
 	public GameObject deadPanel;
 	public GameObject endPanel;
+    public GameObject background;
 
 	void Start() 
 	{
 		GameModel.score = 0;
+        GameModel.cannetonValue = 10000;
 		textLife = GameObject.Find("Vie chiffre").GetComponent<Text>();
 		textLife.text = hp.ToString ();
 		textScore = GameObject.Find("Score chiffre").GetComponent<Text>();
@@ -74,7 +76,7 @@ public class HealthScript : MonoBehaviour
 					Destroy (gameObject);
 				}
 			}
-		} else if (collider.gameObject.name == "Caneton") {
+		} else if (collider.gameObject.tag == "Caneton") {
 			GameModel.score += GameModel.cannetonValue;
 			GameModel.cannetonValue += GameModel.cannetonIncrement;
 			textScore.text = GameModel.score.ToString ();
@@ -87,8 +89,10 @@ public class HealthScript : MonoBehaviour
 		} else if (collider.gameObject.tag == "Enemy") {
 			hp -= shot.damage;
 			textLife.text = hp.ToString ();
-		} else if (collider.gameObject.name == "endLine") {
+		} else if (collider.gameObject.name == "endLine" && !isEnemy) {
 			endPanel.SetActive (true);
+            background.gameObject.GetComponent<ScrollingScript>().enabled = false;
+            Destroy(gameObject);
 		}
     }
 }

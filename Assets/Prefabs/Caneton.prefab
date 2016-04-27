@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11409430}
   m_Layer: 0
   m_Name: Caneton
-  m_TagString: Untagged
+  m_TagString: Caneton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
