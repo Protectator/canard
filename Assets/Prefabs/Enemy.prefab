@@ -121,6 +121,7 @@ MonoBehaviour:
   hp: 1
   isEnemy: 1
   popcornPrefab: {fileID: 486724, guid: 85283e7cc9e05ef4895db4baa7e6805b, type: 2}
+  deadPanel: {fileID: 0}
 --- !u!114 &11449220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ad59ac8bf912b439ac94c71405145d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 1, y: 2}
+  speed: {x: 4, y: 2}
   direction: {x: -1, y: 0}
   isLinkedToCamera: 0
 --- !u!212 &21207230
