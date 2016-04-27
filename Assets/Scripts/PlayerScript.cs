@@ -25,8 +25,8 @@ public class PlayerScript : MonoBehaviour
           speed.y * inputY);
 
         // 5 - Tir
-        bool shoot = Input.GetButtonDown("Fire1");
-        shoot |= Input.GetButtonDown("Fire2");
+        bool shoot = Input.GetButton("Fire1");
+        shoot |= Input.GetButton("Fire2");
         // Astuce pour ceux sous Mac car Ctrl + flèches est utilisé par le système
 
         if (shoot)

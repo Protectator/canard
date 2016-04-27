@@ -71,9 +71,10 @@ public class HealthScript : MonoBehaviour
 							GameModel.highScore = GameModel.score;
 							textHighScore.text = GameModel.highScore.ToString ();
 						}
-					}
-					// Destruction !
-					Destroy (gameObject);
+                        background.gameObject.GetComponent<ScrollingScript>().enabled = false;
+                    }
+                    // Destruction !
+                    Destroy (gameObject);
 				}
 			}
 		} else if (collider.gameObject.tag == "Caneton") {
@@ -87,10 +88,13 @@ public class HealthScript : MonoBehaviour
 			textScore.text = GameModel.score.ToString ();
 			Destroy (collider.gameObject);
 		} else if (collider.gameObject.tag == "Enemy") {
-			hp -= shot.damage;
-			textLife.text = hp.ToString ();
-		} else if (collider.gameObject.name == "endLine" && !isEnemy) {
+			textLife.text = hp.ToString();
+            Destroy(collider.gameObject);
+            SpecialEffectsHelper.Instance.Explosion(transform.position);
+            SoundEffectsHelper.Instance.MakeExplosionSound();
+        } else if (collider.gameObject.name == "endLine" && !isEnemy) {
 			endPanel.SetActive (true);
+            GameModel.score += 20000 * hp;
             background.gameObject.GetComponent<ScrollingScript>().enabled = false;
             Destroy(gameObject);
 		}
