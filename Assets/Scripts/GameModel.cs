@@ -11,4 +11,5 @@ public class GameModel : MonoBehaviour {
 	public static int popcornValue = 100;
 	public static int ennemyValue = 1000;
 	public static int highScore = 0;
+	public static int initialLife = 5;
 }
