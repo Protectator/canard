@@ -97,6 +97,11 @@ public class HealthScript : MonoBehaviour
             GameModel.score += 20000 * hp;
             background.gameObject.GetComponent<ScrollingScript>().enabled = false;
             Destroy(gameObject);
-		}
+            if (GameModel.score > GameModel.highScore)
+            {
+                GameModel.highScore = GameModel.score;
+                textHighScore.text = GameModel.highScore.ToString();
+            }
+        }
     }
 }
