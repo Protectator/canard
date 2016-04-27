@@ -9,7 +9,7 @@ public class HealthScript : MonoBehaviour
     /// <summary>
     /// Points de vies
     /// </summary>
-    public int hp = 5;
+	public int hp = GameModel.initialLife;
 
     /// <summary>
     /// Ennemi ou joueur ?

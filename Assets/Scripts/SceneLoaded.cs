@@ -9,7 +9,8 @@ public class SceneLoaded : MonoBehaviour {
 			Text highScore = GameObject.Find ("HighScore chiffre").GetComponent<Text> ();
 			highScore.text = GameModel.highScore.ToString ();
 		} else if (level == 1) {
-			
+			Text textLife = GameObject.Find("Vie chiffre").GetComponent<Text>();
+			textLife.text = GameModel.initialLife.ToString();
 		}
 	}
 
