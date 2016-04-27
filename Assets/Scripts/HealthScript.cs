@@ -18,16 +18,21 @@ public class HealthScript : MonoBehaviour
 
 	private Text textLife;
 	private Text textScore;
+	private Text textHighScore;
 
 	public Transform popcornPrefab;
 
 	public GameObject deadPanel;
+	public GameObject endPanel;
 
 	void Start() 
 	{
+		GameModel.score = 0;
 		textLife = GameObject.Find("Vie chiffre").GetComponent<Text>();
 		textLife.text = hp.ToString ();
 		textScore = GameObject.Find("Score chiffre").GetComponent<Text>();
+		textHighScore = GameObject.Find ("HighScore chiffre").GetComponent<Text> ();
+		textHighScore.text = GameModel.highScore.ToString ();
 	}
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -60,6 +65,10 @@ public class HealthScript : MonoBehaviour
 					SoundEffectsHelper.Instance.MakeExplosionSound ();
 					if (!isEnemy) {
 						deadPanel.SetActive (true);
+						if (GameModel.score > GameModel.highScore) {
+							GameModel.highScore = GameModel.score;
+							textHighScore.text = GameModel.highScore.ToString ();
+						}
 					}
 					// Destruction !
 					Destroy (gameObject);
@@ -78,6 +87,8 @@ public class HealthScript : MonoBehaviour
 		} else if (collider.gameObject.tag == "Enemy") {
 			hp -= shot.damage;
 			textLife.text = hp.ToString ();
+		} else if (collider.gameObject.name == "endLine") {
+			endPanel.SetActive (true);
 		}
     }
 }

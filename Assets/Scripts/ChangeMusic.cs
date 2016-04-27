@@ -4,6 +4,7 @@ using System.Collections;
 public class ChangeMusic : MonoBehaviour {
 
 	public AudioClip level1Music;
+	public AudioClip menuMusic;
 
 	private AudioSource source;
 
@@ -18,6 +19,10 @@ public class ChangeMusic : MonoBehaviour {
 		if (level == 1) 
 		{
 			source.clip = level1Music;
+			source.Play ();
+		}
+		if (level == 0) {
+			source.clip = menuMusic;
 			source.Play ();
 		}
 	}
