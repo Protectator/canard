@@ -70,6 +70,12 @@ public class WeaponScript : MonoBehaviour
             {
                 move.direction = this.transform.right; // ici la droite sera le devant de notre objet
             }
+
+            // Son
+            if (!isEnemy)
+            {
+                SoundEffectsHelper.Instance.MakePlayerShotSound();
+            }
         }
     }
 
