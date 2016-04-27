@@ -4,7 +4,10 @@ using UnityEngine.UI;
 
 public class GameModel : MonoBehaviour {
 
-	public static int score = 10;
-	public static int nextCanneton = 0;
-
+	public static int score = 0;
+	public static int cannetonIncrement = 10000;
+	public static int popcornIncrement = 100;
+	public static int cannetonValue = 10000;
+	public static int popcornValue = 100;
+	public static int ennemyValue = 1000;
 }

@@ -19,6 +19,8 @@ public class HealthScript : MonoBehaviour
 	private Text textLife;
 	private Text textScore;
 
+	public Transform popcornPrefab;
+
 	void Start() 
 	{
 		textLife = GameObject.Find("Vie chiffre").GetComponent<Text>();
@@ -42,6 +44,11 @@ public class HealthScript : MonoBehaviour
 
 				if (!isEnemy) {
 					textLife.text = hp.ToString ();
+				} else {
+					GameModel.score += GameModel.ennemyValue;
+					textScore.text = GameModel.score.ToString ();
+					var popcorn = Instantiate(popcornPrefab) as Transform;
+					popcorn.position = transform.position;
 				}
 
 				if (hp <= 0) {
@@ -54,9 +61,16 @@ public class HealthScript : MonoBehaviour
 					Destroy (gameObject);
 				}
 			}
-		} else if (collider.gameObject.name == "Caneton") 
-		{
-			textScore.text = (++GameModel.score).ToString();
+		} else if (collider.gameObject.name == "Caneton") {
+			GameModel.score += GameModel.cannetonValue;
+			GameModel.cannetonValue += GameModel.cannetonIncrement;
+			textScore.text = GameModel.score.ToString ();
+			Destroy (collider.gameObject);
+		} else if (collider.gameObject.tag == "Pop-Corn") {
+			GameModel.score += GameModel.popcornValue;
+			GameModel.cannetonValue += GameModel.popcornIncrement;
+			textScore.text = GameModel.score.ToString ();
+			Destroy (collider.gameObject);
 		}
     }
 }
