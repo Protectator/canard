@@ -14,13 +14,11 @@ public class StartHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 	public void OnPointerEnter(PointerEventData enventData)
 	{
 		theText.color = Color.blue;
-		Cursor.SetCursor (cursorTexture, hotSpot, cursorMode);
 	}
 
 	public void OnPointerExit(PointerEventData eventData) 
 	{
 		theText.color = Color.black;
-		Cursor.SetCursor (null, Vector2.zero, cursorMode);
 	}
 
 }
