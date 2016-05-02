@@ -3,7 +3,7 @@
 /// <summary>
 /// Crée des projectiles
 /// </summary>
-public class WeaponScript : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     //--------------------------------
     // 1 - Designer variables
@@ -58,18 +58,19 @@ public class WeaponScript : MonoBehaviour
             shotTransform.position = transform.position;
 
             // Propriétés du script
-            ShotScript shot = shotTransform.gameObject.GetComponent<ShotScript>();
+            Shot shot = shotTransform.gameObject.GetComponent<Shot>();
             if (shot != null)
             {
                 shot.isEnemyShot = isEnemy;
             }
 
+            /*
             // On saisit la direction pour le mouvement
             MoveScript move = shotTransform.gameObject.GetComponent<MoveScript>();
             if (move != null)
             {
                 move.direction = this.transform.right; // ici la droite sera le devant de notre objet
-            }
+            }*/
 
             // Son
             if (!isEnemy)

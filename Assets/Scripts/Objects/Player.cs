@@ -3,7 +3,7 @@
 /// <summary>
 /// Contrôleur du joueur
 /// </summary>
-public class PlayerScript : MonoBehaviour
+public class Player : MonoBehaviour
 {
     /// <summary>
     /// 1 - La vitesse de déplacement
@@ -31,7 +31,7 @@ public class PlayerScript : MonoBehaviour
 
         if (shoot)
         {
-            WeaponScript weapon = GetComponent<WeaponScript>();
+            Weapon weapon = GetComponent<Weapon>();
             if (weapon != null)
             {
                 // false : le joueur n'est pas un ennemi

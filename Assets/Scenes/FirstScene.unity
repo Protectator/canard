@@ -2955,7 +2955,6 @@ GameObject:
   - 224: {fileID: 525173526}
   - 222: {fileID: 525173528}
   - 114: {fileID: 525173527}
-  - 114: {fileID: 525173529}
   m_Layer: 5
   m_Name: Dead Panel
   m_TagString: Untagged
@@ -3020,17 +3019,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 525173525}
---- !u!114 &525173529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 525173525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b093491492d3b4bbebcb7f59e4ee63d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &526007111 stripped
 Transform:
   m_PrefabParentObject: {fileID: 451942, guid: 3efdbf71fcbde974293127e96bc74244, type: 2}

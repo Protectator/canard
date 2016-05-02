@@ -40,7 +40,7 @@ public class HealthScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         // Est-ce un tir ?
-        ShotScript shot = collider.gameObject.GetComponent<ShotScript>();
+        Shot shot = collider.gameObject.GetComponent<Shot>();
 		if (shot != null) {
 			// Tir allié
 			if (shot.isEnemyShot != isEnemy) {
@@ -71,7 +71,7 @@ public class HealthScript : MonoBehaviour
 							GameModel.highScore = GameModel.score;
 							textHighScore.text = GameModel.highScore.ToString ();
 						}
-                        background.gameObject.GetComponent<ScrollingScript>().enabled = false;
+                        //background.gameObject.GetComponent<ScrollingScript>().enabled = false;
                     }
                     // Destruction !
                     Destroy (gameObject);
@@ -95,7 +95,7 @@ public class HealthScript : MonoBehaviour
         } else if (collider.gameObject.name == "endLine" && !isEnemy) {
 			endPanel.SetActive (true);
             GameModel.score += 20000 * hp;
-            background.gameObject.GetComponent<ScrollingScript>().enabled = false;
+            background.gameObject.GetComponent<Scrolling>().enabled = false;
             Destroy(gameObject);
             if (GameModel.score > GameModel.highScore)
             {

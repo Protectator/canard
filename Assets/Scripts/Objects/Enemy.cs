@@ -3,33 +3,34 @@
 /// <summary>
 /// Comportement générique pour les méchants
 /// </summary>
-public class EnemyScript : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
+    public Vector2 speed = new Vector2(10, 10);
+    public Vector2 direction = new Vector2(-1, 0);
+
+    private Vector2 realSpeed;
     private bool hasSpawn;
-    private MoveScript moveScript;
-    private WeaponScript[] weapons;
+    private Weapon[] weapons;
+
+    private Vector2 movement;
 
     void Awake()
     {
         // Récupération de toutes les armes de l'ennemi
-        weapons = GetComponentsInChildren<WeaponScript>();
-
-        // Récupération du script de mouvement lié
-        moveScript = GetComponent<MoveScript>();
+        weapons = GetComponentsInChildren<Weapon>();
     }
 
     // 1 - Disable everything
     void Start()
     {
         hasSpawn = false;
+        realSpeed = new Vector2(0, 0);
 
         // On désactive tout
         // -- collider
         GetComponent<Collider2D>().enabled = false;
-        // -- Mouvement
-        moveScript.enabled = false;
         // -- Tir
-        foreach (WeaponScript weapon in weapons)
+        foreach (Weapon weapon in weapons)
         {
             weapon.enabled = false;
         }
@@ -47,8 +48,11 @@ public class EnemyScript : MonoBehaviour
         }
         else
         {
+            movement = new Vector2(
+            realSpeed.x * direction.x,
+            realSpeed.y * direction.y);
             // On fait tirer toutes les armes automatiquement
-            foreach (WeaponScript weapon in weapons)
+            foreach (Weapon weapon in weapons)
             {
                 if (weapon != null && weapon.enabled && weapon.CanAttack)
                 {
@@ -70,16 +74,20 @@ public class EnemyScript : MonoBehaviour
     private void Spawn()
     {
         hasSpawn = true;
+        realSpeed = speed;
 
         // On active tout
         // -- Collider
         GetComponent<Collider2D>().enabled = true;
-        // -- Mouvement
-        moveScript.enabled = true;
         // -- Tir
-        foreach (WeaponScript weapon in weapons)
+        foreach (Weapon weapon in weapons)
         {
             weapon.enabled = true;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        GetComponent<Rigidbody2D>().velocity = movement;
     }
 }

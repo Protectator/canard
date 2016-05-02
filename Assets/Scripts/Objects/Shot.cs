@@ -3,7 +3,7 @@
 /// <summary>
 /// Comportement des tirs
 /// </summary>
-public class ShotScript : MonoBehaviour
+public class Shot : MonoBehaviour
 {
     // 1 - Designer variables
 

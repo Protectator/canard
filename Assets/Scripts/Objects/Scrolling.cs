@@ -3,7 +3,7 @@
 /// <summary>
 /// Parallax scrolling
 /// </summary>
-public class ScrollingScript : MonoBehaviour
+public class Scrolling : MonoBehaviour
 {
     /// <summary>
     /// Vitesse du défilement
