@@ -74,7 +74,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  speed: {x: 40, y: 0}
+  direction: {x: 1, y: 0}
   isEnemyShot: 0
+  owner: {fileID: 174818, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
 --- !u!212 &21264708
 SpriteRenderer:
   m_ObjectHideFlags: 1

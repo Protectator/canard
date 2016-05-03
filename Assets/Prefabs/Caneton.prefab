@@ -73,6 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ab1668804f50747af6a6454abf41a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCaneton: 1
+  score: 100
+  canetonValueIncrement: 100
 --- !u!212 &21282486
 SpriteRenderer:
   m_ObjectHideFlags: 1

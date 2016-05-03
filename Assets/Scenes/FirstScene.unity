@@ -6184,20 +6184,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11491704, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
+    - target: {fileID: 0}
       propertyPath: deadPanel
       value: 
       objectReference: {fileID: 525173525}
-    - target: {fileID: 11491704, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
+    - target: {fileID: 0}
       propertyPath: endPanel
       value: 
       objectReference: {fileID: 1150369514}
-    - target: {fileID: 11491704, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
+    - target: {fileID: 0}
       propertyPath: background
       value: 
       objectReference: {fileID: 233307678}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488138, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
+      propertyPath: deadPanel
+      value: 
+      objectReference: {fileID: 525173525}
+    - target: {fileID: 11488138, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
+      propertyPath: endPanel
+      value: 
+      objectReference: {fileID: 1150369514}
+    - target: {fileID: 11488138, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 233307678}
+    - target: {fileID: 11488138, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
+      propertyPath: scrollingObject
+      value: 
+      objectReference: {fileID: 132976737}
     m_RemovedComponents:
     - {fileID: 11414260, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: b7c8b6ec18bb7c34ea936622ee16c0f6, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1098271865
@@ -6945,6 +6966,7 @@ GameObject:
   - 92: {fileID: 1270624994}
   - 124: {fileID: 1270624993}
   - 81: {fileID: 1270624992}
+  - 114: {fileID: 1270624996}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7019,6 +7041,17 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!114 &1270624996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270624990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4b5f8b836461a4ab5b556812d98a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1296222154
 GameObject:
   m_ObjectHideFlags: 0

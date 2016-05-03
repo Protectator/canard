@@ -43,7 +43,6 @@ GameObject:
   - 212: {fileID: 21273386}
   - 61: {fileID: 6126854}
   - 50: {fileID: 5073992}
-  - 114: {fileID: 11482826}
   - 114: {fileID: 11456066}
   m_Layer: 0
   m_Name: Enemy2
@@ -133,6 +132,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 418560, guid: 6dcc14ce495a82542828b4b50692cc3c, type: 2}
+  shotSpeed: {x: 15, y: 4}
+  shotDirection: {x: -1, y: 1}
   shootingRate: 2
 --- !u!114 &11456066
 MonoBehaviour:
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
   direction: {x: -1, y: 0}
+  bonus: {fileID: 183860, guid: 85283e7cc9e05ef4895db4baa7e6805b, type: 2}
 --- !u!114 &11471234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,24 +161,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 418560, guid: 6dcc14ce495a82542828b4b50692cc3c, type: 2}
+  shotSpeed: {x: 15, y: 4}
+  shotDirection: {x: -1, y: -1}
   shootingRate: 2
---- !u!114 &11482826
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e54b2984fa872f49994bc5896ca447c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  isEnemy: 1
-  popcornPrefab: {fileID: 486724, guid: 85283e7cc9e05ef4895db4baa7e6805b, type: 2}
-  deadPanel: {fileID: 0}
-  endPanel: {fileID: 0}
-  background: {fileID: 0}
 --- !u!212 &21273386
 SpriteRenderer:
   m_ObjectHideFlags: 1

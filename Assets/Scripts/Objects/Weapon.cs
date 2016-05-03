@@ -13,6 +13,8 @@ public class Weapon : MonoBehaviour
     /// Prefab du projectile
     /// </summary>
     public Transform shotPrefab;
+    public Vector2 shotSpeed;
+    public Vector2 shotDirection;
 
     /// <summary>
     /// Temps de rechargement entre deux tirs
@@ -45,7 +47,7 @@ public class Weapon : MonoBehaviour
     /// <summary>
     /// Création d'un projectile si possible
     /// </summary>
-    public void Attack(bool isEnemy)
+    public void Attack(bool isEnemy, Player owner = null)
     {
         if (CanAttack)
         {
@@ -57,8 +59,15 @@ public class Weapon : MonoBehaviour
             // Position
             shotTransform.position = transform.position;
 
+            if (isEnemy)
+            {
+                EnemyShot eShot = shotPrefab.GetComponent<EnemyShot>();
+                eShot.speed = shotSpeed;
+                eShot.direction = shotDirection;
+            }
+
             // Propriétés du script
-            Shot shot = shotTransform.gameObject.GetComponent<Shot>();
+            PlayerShot shot = shotTransform.gameObject.GetComponent<PlayerShot>();
             if (shot != null)
             {
                 shot.isEnemyShot = isEnemy;
@@ -76,6 +85,7 @@ public class Weapon : MonoBehaviour
             if (!isEnemy)
             {
                 SoundEffectsHelper.Instance.MakePlayerShotSound();
+                shot.owner = owner;
             }
         }
     }

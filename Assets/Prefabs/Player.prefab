@@ -14,7 +14,6 @@ GameObject:
   - 114: {fileID: 11446446}
   - 58: {fileID: 5862230}
   - 114: {fileID: 11414260}
-  - 114: {fileID: 11491704}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -104,20 +103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 20, y: 20}
---- !u!114 &11491704
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e54b2984fa872f49994bc5896ca447c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   hp: 5
-  isEnemy: 0
-  popcornPrefab: {fileID: 0}
+  score: 0
+  canetonValue: 10000
   deadPanel: {fileID: 0}
   endPanel: {fileID: 0}
   background: {fileID: 0}

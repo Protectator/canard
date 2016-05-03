@@ -1,17 +1,36 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
-/// <summary>
-/// Contrôleur du joueur
-/// </summary>
 public class Player : MonoBehaviour
 {
-    /// <summary>
-    /// 1 - La vitesse de déplacement
-    /// </summary>
     public Vector2 speed = new Vector2(50, 50);
+    public int hp = 5;
+    public int score = 0;
+    public int canetonValue = 10000;
 
-    // 2 - Stockage du mouvement
+    public GameObject deadPanel;
+    public GameObject endPanel;
+    public GameObject background;
+
+    public Scrolling scrollingObject;
+
     private Vector2 movement;
+
+    private Text textLife;
+    private Text textScore;
+    private Text textHighScore;
+
+    void Start()
+    {
+        hp = 5;
+        score = 0;
+        canetonValue = 10000;
+        PlayerPrefs.SetInt("score", score);
+        textLife = GameObject.Find("Vie chiffre").GetComponent<Text>();
+        textScore = GameObject.Find("Score chiffre").GetComponent<Text>();
+        textHighScore = GameObject.Find("HighScore chiffre").GetComponent<Text>();
+        UpdateUI();
+    }
 
     void Update()
     {
@@ -35,7 +54,7 @@ public class Player : MonoBehaviour
             if (weapon != null)
             {
                 // false : le joueur n'est pas un ennemi
-                weapon.Attack(false);
+                weapon.Attack(false, this);
             }
         }
 
@@ -69,5 +88,41 @@ public class Player : MonoBehaviour
     {
         // 5 - Déplacement
         GetComponent<Rigidbody2D>().velocity = movement;
+    }
+
+    public void AddScore(int value)
+    {
+        score += value;
+        PlayerPrefs.SetInt("score", score);
+        int high = PlayerPrefs.GetInt("highScore");
+        if (score > high)
+        {
+            PlayerPrefs.SetInt("highScore", score);
+        }
+        UpdateUI();
+    }
+
+    public void AddCanetonValue(int value)
+    {
+        canetonValue += value;
+    }
+
+    public void UpdateUI()
+    {
+        textScore.text = PlayerPrefs.GetInt("score").ToString();
+        textHighScore.text = PlayerPrefs.GetInt("highScore").ToString();
+        textLife.text = hp.ToString();
+    }
+
+    public void TakeDamage(int amount = 1)
+    {
+        hp--;
+        if (hp <= 0)
+        {
+            deadPanel.SetActive(true);
+            scrollingObject.speed = new Vector2(0,0);
+            Destroy(gameObject);
+        }
+        UpdateUI();
     }
 }
