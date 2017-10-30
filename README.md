@@ -26,3 +26,6 @@ Some actions increase all future Duckling's value. These are :
 
 Additionally, finishing a level earns you 100'000 points + 20'000 points per remaining life.
 
+## Demo
+
+You can play it online at [https://canard.protectator.ch](https://canard.protectator.ch)
