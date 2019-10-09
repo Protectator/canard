@@ -9,7 +9,7 @@ You control the duck on a 2D shoot'em up. Dodge the beaver's shots while shootin
 
 ### Lives
 
-You start the game with 5 lives. Each time you get hit, you lost one life. You are immediately vulnerable again, so stay 
+You start the game with 5 lives. Each time you get hit, you lose one life. You are immediately vulnerable again, so stay away from enemies !
 
 ### Score
 
